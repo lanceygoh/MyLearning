@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @portfolio.name %>
+</p>
+
+<p>
+	<strong>ID:</strong>
+	<%= @portfolio.id %>
+</p>
+
+<%= render 'Shared/addNewCounter'%>
+
+<p> <b>List of Counters in <%= @portfolio.name %></b></p>
+
+<%= render 'portfolio_counters/index'%> 
+
+
+<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+<%= link_to 'Back', portfolios_path %>
+
+
+
+<%= render 'Shared/testingJSONCall'%>

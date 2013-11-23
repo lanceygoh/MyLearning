@@ -1,0 +1,35 @@
+<h1>Listing portfolio_counters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pid</th>
+      <th>Cid</th>
+      <th>Price</th>
+      <th>Purchasedate</th>
+      <th>Size</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @portfolio_counters.each do |portfolio_counter| %>
+      <tr>
+        <td><%= portfolio_counter.pid %></td>
+        <td><%= portfolio_counter.cid %></td>
+        <td><%= portfolio_counter.price %></td>
+        <td><%= portfolio_counter.purchasedate %></td>
+        <td><%= portfolio_counter.size %></td>
+        <td><%= link_to 'Show', portfolio_counter %></td>
+        <td><%= link_to 'Edit', edit_portfolio_counter_path(portfolio_counter) %></td>
+        <td><%= link_to 'Destroy', portfolio_counter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Portfolio counter', new_portfolio_counter_path %>

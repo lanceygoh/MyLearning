@@ -1,0 +1,27 @@
+
+<%= form_for(@portfolio_counter) do |f| %>
+
+  <%= f.hidden_field :pid , :value => @portfolio.id %>
+
+  <div class="field">
+    <%= f.label :cid , "Select a Counter" %><br>
+    <%= f.collection_select :cid, Counter.all, :id, :fullname, include_blank: true %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :purchasedate %><br>
+    <%= f.date_select :purchasedate %>
+  </div>
+  <div class="field">
+    <%= f.label :size, "Lot Size" %><br>
+    <%= f.number_field :size %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>

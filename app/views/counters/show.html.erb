@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fullname:</strong>
+  <%= @counter.fullname %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @counter.currency %>
+</p>
+
+<p>
+  <strong>Listedboard:</strong>
+  <%= @counter.listedBoard %>
+</p>
+
+<p>
+  <strong>Sgxcode:</strong>
+  <%= @counter.sgxcode %>
+</p>
+
+<%= link_to 'Edit', edit_counter_path(@counter) %> |
+<%= link_to 'Back', counters_path %>

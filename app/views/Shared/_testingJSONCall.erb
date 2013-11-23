@@ -1,0 +1,30 @@
+<%
+#Do not put the = sign in  <%= to prevent rendering in browser 
+response = HTTParty.get('http://finance.google.com/finance/info?client=ig&q=SGX:CC3')
+s1 = response.body
+
+#the below 2 gsub is to remove the bracket from the data returned from the webservice
+s1  = s1.gsub("[","") 
+s1 = s1.gsub("]","")
+body = JSON.parse(s1)
+%>
+
+ <table>
+ 	<tr>
+ 		<th>Code</th>
+ 		<th>Price</th>
+ 		<th>Change</th>
+ 		<th>Change %</th>
+ 		<th>StockName</th>
+ 	</tr>
+ 	<tr>
+ 		<td><%=body["t"]%></td>
+ 		<td><%=body["l"]%></td>
+ 		<td><%=body["c"]%></td>
+ 		<td><%=body["cp"]%></td>
+ 		<%
+ 			c = Counter.find_by sgxcode: "CC3 "
+ 		%>
+ 		<td><%=c.fullname%></td>
+
+</table> 

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pid: 1
+  cid: 1
+  price: 9.99
+  purchasedate: 2013-11-10
+  size: 1
+
+two:
+  pid: 1
+  cid: 1
+  price: 9.99
+  purchasedate: 2013-11-10
+  size: 1

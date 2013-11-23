@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pid:</strong>
+  <%= @portfolio_counter.pid %>
+</p>
+
+<p>
+  <strong>Cid:</strong>
+  <%= @portfolio_counter.cid %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @portfolio_counter.price %>
+</p>
+
+<p>
+  <strong>Purchasedate:</strong>
+  <%= @portfolio_counter.purchasedate %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @portfolio_counter.size %>
+</p>
+
+<%= link_to 'Edit', edit_portfolio_counter_path(@portfolio_counter) %> |
+<%= link_to 'Back', portfolio_counters_path %>
